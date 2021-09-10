@@ -1,0 +1,215 @@
+<script type="text/javascript">
+window.data = {};
+</script>
+
+<script src="requirements.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.0.0/d3.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+<script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+<style type="text/css">
+tr {
+  white-space: pre;
+  white-space: pre-line;
+}
+
+.test_case {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  max-width: 600px;
+}
+
+.test_case__title {
+  border: 1px solid black;
+}
+
+.test_case__summary {
+  border: 1px solid black;
+  width: 300px;
+  height: 200px;
+}
+
+.test_case__chart {
+  border: 1px solid black;
+}
+
+</style>
+
+<!-- The script element is used to define the Handlebars template -->
+<script type="text/x-handlebars-template" id="tableTemplate">
+  <thead>
+    <tr>
+      {{#each array.[0]}}
+        <th>{{@key}}</th>
+      {{/each}}
+    </tr>
+  </thead>
+  <tbody>
+    {{#each array}}
+      <tr>
+        {{#each this}}
+          <td>{{this}}</td>
+        {{/each}}
+      </tr>
+    {{/each}}
+  </tbody>
+</script>
+
+<script type="text/x-handlebars-template" id="summaryTemplate">
+	<div>
+		<p>Total: {{total}}</p>
+		<p>Passing: {{passing}} ({{passingRate}}%)</p>
+		<p>Failing: {{failing}} ({{failingRate}}%)</p>
+		<p>Not Tested: {{notTested}} ({{notTestedRate}}%)</p>
+	</div> 
+</script>
+
+<h2>Test Result</h2>
+<h3 class="test_case__title">All Test Cases</h3>
+<div class="test_case">
+  <div class="test_case__summary test_case_summary" id="all"></div>
+	<svg class="test_case__chart" id="all_chart" width="300" height="200"></svg>
+</div>
+
+<h3 class="test_case__title">P1 Test Cases</h3>
+<div class="test_case">
+  <div class="test_case__summary test_case_summary" id="p1"></div>
+	<svg class="test_case__chart" id="p1_chart" width="300" height="200"></svg>
+</div>
+
+<h3 class="test_case__title">P2 Test Cases</h3>
+<div class="test_case">
+  <div class="test_case__summary test_case_summary" id="p2"></div>
+	<svg class="test_case__chart" id="p2_chart" width="300" height="200"></svg>
+</div>
+
+<h3 class="test_case__title">P3 Test Cases</h3>
+<div class="test_case">
+  <div class="test_case__summary" id="p3"></div>
+	<svg class="test_case__chart" id="p3_chart" width="300" height="200"></svg>
+</div>
+
+<h3 class="test_case__title">P4 Test Cases</h3>
+<div class="test_case">
+  <div class="test_case__summary" id="p4"></div>
+	<svg class="test_case__chart" id="p4_chart" width="300" height="200"></svg>
+</div>
+
+<table id="people" class="display"></table>
+
+
+
+
+
+
+<script type="text/javascript">
+function fillChart(id, data)
+{
+
+    var svg = d3.select(id),
+        width = svg.attr("width"),
+        height = svg.attr("height"),
+        radius = Math.min(width, height) / 2,
+        g = svg.append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+    var color = d3.scaleOrdinal(['green', 'red', 'blue']);
+
+    // Generate the pie
+    var pie = d3.pie();
+
+    // Generate the arcs
+    var arc = d3.arc()
+                .innerRadius(0)
+                .outerRadius(radius);
+
+    //Generate groups
+    var arcs = g.selectAll("arc")
+                .data(pie(data))
+                .enter()
+                .append("g")
+                .attr("class", "arc")
+
+    //Draw arc paths
+    arcs.append("path")
+        .attr("fill", function(d, i) {
+            return color(i);
+        })
+        .attr("d", arc);
+}
+
+$(function () {
+	fillChart("#all_chart", [
+    window.data.allStats.passing,
+    window.data.allStats.failing,
+    window.data.allStats.notTested 
+  ]);
+
+	fillChart("#p1_chart", [
+    window.data.p1Stats.passing,
+    window.data.p1Stats.failing,
+    window.data.p1Stats.notTested 
+  ]);
+
+	fillChart("#p2_chart", [
+    window.data.p2Stats.passing,
+    window.data.p2Stats.failing,
+    window.data.p2Stats.notTested 
+  ]);
+
+	fillChart("#p3_chart", [
+    window.data.p3Stats.passing,
+    window.data.p3Stats.failing,
+    window.data.p3Stats.notTested 
+  ]);
+
+	fillChart("#p4_chart", [
+    window.data.p4Stats.passing,
+    window.data.p4Stats.failing,
+    window.data.p4Stats.notTested 
+  ]);
+});
+</script>
+
+<script type="text/javascript">
+$(function () {
+  var templateText = $("#tableTemplate").html();
+  var summaryText = $("#summaryTemplate").html();
+  
+  var tableTemplate = Handlebars.compile(templateText);
+  var summaryTemplate = Handlebars.compile(summaryText);
+
+  $("#all").html(summaryTemplate(window.data.allStats));
+  $("#p1").html(summaryTemplate(window.data.p1Stats));
+  $("#p2").html(summaryTemplate(window.data.p2Stats));
+  $("#p3").html(summaryTemplate(window.data.p3Stats));
+  $("#p4").html(summaryTemplate(window.data.p4Stats));
+  
+  $("#people").html(tableTemplate({ array: window.data.report }));
+  $('#people').DataTable(
+    {
+      "columnDefs": [ {
+        "targets": 5,
+        "createdCell": function (td, cellData, rowData, row, col) {
+          console.log(cellData)
+          if ( cellData === "Fail" ) 
+          {
+            $(td).css('background-color', 'red')
+          }
+          else if ( cellData === "Pass" ) 
+          {
+            $(td).css('background-color', 'green')
+          }
+          else 
+          {
+            $(td).css('background-color', 'blue')
+          }
+        }
+      } ],
+      "paging":   false,
+    } 
+  );
+});
+</script>

@@ -1,0 +1,86 @@
+---
+S1a:
+  component: "App"
+  state: "state 1"
+L1a:
+  component: "Login"
+  state: "state 1"
+L1b:
+  component: "Login"
+  event: "state 1"
+L2a:
+  component: "Login"
+  state: "state A"
+L2b:
+  component: "Login"
+  event: "state B"
+
+R1a:
+  component: "event 1"
+  event: "event 1"
+R1b:
+  component: "component 2"
+  state: "state 2"
+R1c: 
+  component: "component 3"
+  state: "state 3"
+R1d: 
+  component: "component 4"
+  state: "state 4"
+R1d1a: 
+  component: "guard 1"
+  guard: "state A"
+R1d1b: 
+  component: "component 3"
+  state: "state 3a"
+R1d2a: 
+  component: "guard 2"
+  guard: "state B"
+R1d2b: 
+  component: "component 3"
+  state: "state 3b"
+R1e: 
+  component: "component 5"
+  state: "state 5"
+R1f: 
+  component: "component 6"
+  state: "state 6"
+R1f1a: 
+  component: "component 7"
+  state: "state 7"
+R1g: 
+  component: "component 8"
+  state: "state 8"
+R2a: 
+  component: ""
+  event: ""
+R2b: 
+  component: ""
+  event: ""
+R3a: 
+  component: ""
+  event: ""
+R3b: 
+  component: ""
+  event: ""
+R4a: 
+  component: ""
+  event: ""
+R4b: 
+  component: ""
+  event: ""
+R5a: 
+  component: ""
+  event: ""
+R5b: 
+  component: ""
+  event: ""
+R5c: 
+  component: ""
+  event: ""
+R5c1a: 
+  component: ""
+  event: ""
+R5d: 
+  component: ""
+  event: ""

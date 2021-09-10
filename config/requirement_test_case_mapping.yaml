@@ -1,0 +1,51 @@
+---
+S1: startup-ca.spec.js
+L1: login-1-ca.spec.js
+L2: login-2-ca.spec.js
+R1: filter-btn-click-ca.spec.js
+R2: filter-btn-click-ca.spec.js
+R3: subFilter-click-ca.spec.js
+R4: apply-filters-ca.spec.js
+R5: multiple-filters-ca.spec.js
+CC1: export-btn-click-ca.spec.js
+CC2: export-spreadSheet-ca.spec.js
+CC3: items-presence-ca-1.spec.js
+CC4: item-presence-ca-2.spec.js	
+CC5: 3dots-btn-click-ca.spec.js	 
+CC6: itemCard-display-ca.spec.js	
+CC7: search-by-itemID-ca.spec.js	
+CC8: seacrh-by-walmartItemNuber-ca.spec.js
+CC9: search-by-GTIN-ca.spec.js
+CC10: search-by-itemID-ca.spec.js	
+CC11: itemConfigurationOverView-ca.spec.js		
+CC12: checkbox-click-ca.spec.js	
+CC13: product-details-ca.spec.js		
+UP1: upload-btnClick-ca.spec.js 
+UP2: 
+UP3: next-btnClick-ca.spec.js
+UP4: next-btnClick-ca.spec.js
+UP5: 
+UP6: 
+UP7: 
+UP8: 
+M1: test/e2e/canada/maintenance/main-btnclick-ca.spec.js
+M2: test/e2e/canada/maintenance/main-btnclick-ca.spec.js
+M3: test/e2e/canada/maintenance/main-btnclick-ca.spec.js
+M4: test/e2e/canada/maintenance/main-btnclick-ca.spec.js
+M5: test/e2e/canada/maintenance/main-btnclick-ca.spec.js
+M6: test/e2e/canada/maintenance/product-content/gtin.spec.js
+M7: test/e2e/canada/maintenance/store-attributes/sc-win.spec.js
+M8: test/e2e/canada/maintenance/store-attributes/sc-win.spec.js
+M9: test/e2e/canada/maintenance/product-content/isbn.spec.js
+M10: test/e2e/canada/maintenance/store-attributes/st-win.spec.js
+M11: test/e2e/canada/maintenance/store-attributes/sc-win.spec.js
+M12: test/e2e/canada/maintenance/store-attributes/st-win.spec.js
+M13: test/e2e/canada/maintenance/store-attributes/sc-win.spec.js
+M14: test/e2e/canada/maintenance/store-attributes/sc-win.spec.js
+M15: test/e2e/canada/maintenance/store-attributes/st-win.spec.js
+M16: 
+M17: test/e2e/canada/maintenance/imagery/btnclick.spec.js
+M18: test/e2e/canada/maintenance/imagery/upload-btnClick.spec.js
+M19: test/e2e/canada/maintenance/imagery/upload-btnClick.spec.js
+M20: test/e2e/canada/maintenance/store-attributes/st-win.spec.js
+M21: test/e2e/canada/maintenance/store-attributes/st-win.spec.js

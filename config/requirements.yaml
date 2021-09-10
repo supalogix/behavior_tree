@@ -1,0 +1,405 @@
+---
+- Id: S1
+  Component: App
+  Priority: P1
+  Requirement: |
+    Application Starts
+- Id: L1
+  Component: Login
+  Priority: P1
+  Requirement: |
+    When: User enters Item360 via Item360.walmart.com
+    Then:
+      If the user login first time, he/she should redirect to /market-modal route
+      User should see a modal pop up to ask him/her to choose market
+      Once the user chose an option, they should be redirected to the respective store catalog view.
+- Id: L2
+  Component: Login
+  Priority: P1
+  Requirement: |
+    When: If the user has access to multiple market catalogs
+    Then: The options in the toggle market header are populated based on the available markets the user has access to.
+- Id: UP1
+  Component: Upload
+  Priority: P1
+  Requirement: |
+    The user is able to click on Upload button to initiate file upload
+- Id: UP2
+  Component: Upload
+  Priority: P1
+  Requirement: |
+    the user can drag and drop the file
+- Id: UP3
+  Component: Upload
+  Priority: P1
+  Requirement: |
+    the user can select a file using browser option from "Select file
+- Id: UP4
+  Component: Upload
+  Priority: P1
+  Requirement: |
+    the user can click next to proceed to next step
+- Id: UP5
+  Component: Upload
+  Priority: P1
+  Requirement: |
+    the user can provide a brief description for the task. This description is used to identify the activity from the activity manage
+- Id: UP6
+  Component: Upload
+  Priority: P1
+  Requirement: |
+    if there are any errors, we should be able to show it in the screen
+- Id: UP7
+  Component: Upload
+  Priority: P1
+  Requirement: |
+    the user can delete the file that resulted in error and proceed to submit.
+- Id: UP8
+  Component: Upload
+  Priority: P1
+  Requirement: |
+    the user an submit multiple files
+- Id: AM1
+  Component: Activity Manager
+  Priority: P2
+  Requirement: |
+    When: A user enters the Activity Manager,
+    it is presented with all the activities that are completed or pending with either the supplier or with the internal workflows.
+- Id: AM2
+  Component: Activity Manager
+  Priority: P2
+  Requirement: |
+    When: A user wants to refine the submissions,
+    they can use the filter. On click of the filter
+- Id: AM3
+  Component: Activity Manager
+  Priority: P1
+  Requirement: |
+    All the submissions are filtered with a list of activity pertaining to the specific user
+- Id: AM4
+  Component: Activity Manager
+  Priority: P1
+  Requirement: |
+    It is directed to another summary page, with the item summary and displays the information based on the activity status
+      Successful Updates
+      Completed Updates
+      Incomplete Updates (Not in Pilot)
+      Internal submissions (Not in Pilot)
+      Supplier submissions (Not in Pilot)
+- Id: AM5
+  Component: Activity Manager
+  Priority: P2
+  Requirement: |
+    When A user is checking the summary ,
+    Then they will have the option to either download the item details (read only) in a spreadsheet or view them
+- Id: AM6
+  Component: Activity Manager
+  Priority: P2
+  Requirement: |
+    When A user checks the item details,
+    Then they are presented with the new values that are being updated
+- Id: R1
+  Component: Filters - Catalog
+  Priority: P1
+  Requirement: |
+    As a user I'm able to expand the filters link
+- Id: R2
+  Component: Filters - Catalog
+  Priority: P1
+  Requirement: |
+    As a user, all the sub-filters should be closed	
+- Id: R3
+  Component: Filters - Catalog
+  Priority: P1
+  Requirement: |
+    As a user I can see 6 buckets of filters and expand them to see sub-filters	
+- Id: R4
+  Component: Filters - Catalog
+  Priority: P1
+  Requirement: |
+    As a user, 
+    when i choose a sub-filter criteria and apply the same, 
+    the result set should refresh and display ONLY the refined list	
+- Id: R5
+  Component: Filters - Catalog
+  Priority: P1
+  Requirement: |
+    Check if you are able to select multiple filters and the results changes/ narrows down to the selected filters	
+- Id: CC1 
+  Component: CATALOG-Component
+  Priority: P1
+  Requirement: |
+    the Basic export feature would be available which will allow upto 40K items export	
+- Id: CC2
+  Component: CATALOG-Component
+  Priority: P1
+  Requirement: |
+    Then a raw non-formatted, but pre-filled spreadsheet is generated
+- Id: CC3
+  Component: CATALOG-Component
+  Priority: P3
+  Requirement: |
+    the user is on Catalog view
+    the user will
+
+    View the catalog with the "Item Configuration by Walmart Item Number"  
+- Id: CC4
+  Component: CATALOG-Component
+  Priority: P3
+  Requirement: |
+    Display a List view of all the catalog, with each line indicating an item
+- Id: CC5
+  Component: CATALOG-Component
+  Priority: P1
+  Requirement: |
+    the user interacts with the 3 dots on the item card,
+    Then: the following options available via the drop down:
+
+    Item Configuration Overview
+    Supply Chain Details
+    Item Overview
+    Product Details
+- Id: CC6
+  Component: CATALOG-Component
+  Priority: P1
+  Requirement: |
+    each item card in catalog component should have the following fields present -
+
+    Walmart Item Number
+    Product Name
+    Item Status
+    Image
+    GTIN
+    Buying Region
+    Unit Cost
+    Accounting Dept, Fineline
+    Corporate Order Book
+    Retail Price
+    Item Type/Sub-Type
+    Supply Item Effective Date
+    Merchant
+    Supplier
+    Orderable Pack Quantity
+- Id: CC7
+  Component: CATALOG-Component
+  Priority: P1
+  Requirement: |
+    When: the user is on Catalog view
+
+    Then: the user should be able to
+
+    Copy and Paste upto 5000 product ID's to filter the catalog
+- Id: CC8
+  Component: CATALOG-Component
+  Priority: P1
+  Requirement: |
+    2. Ability to search via - Walmart item number	
+- Id: CC9
+  Component: CATALOG-Component
+  Priority: P1
+  Requirement: |
+    2. Ability to search via - GTIN	
+- Id: CC10
+  Component: CATALOG-Component
+  Priority: P1
+  Requirement: |
+    2. Ability to search via - UPC	
+- Id: CC11
+  Component: CATALOG-Component
+  Priority: P1
+  Requirement: |
+    2. Ability to search via - Item ID	
+- Id: CC12
+  Component: CATALOG-Component
+  Priority: P4
+  Requirement: |
+    the user interacts with the Item Configuration Overview from the Item card dropdown and should see the below fields -
+
+    Item Overview
+
+      Image
+      Product Name
+      GTIN
+      Item ID
+      Walmart Item Number
+    Summary
+
+      Selling Channel
+      Status
+      Online Status- (Not in Pilot)
+      Supplier
+      Item Creation Date
+      Item Effective Date
+      Orderable Pack Quantity
+      Is eCom Replenishable
+      Is Corporate Replenishable
+      Fulfilment Method (Not in Pilot)
+      Unit Cost
+      Selling Price (Base Retail)
+      Is Cross Referenced
+      Program Eligibility (Not in Pilot)
+      Brand
+      Financial Heirchary
+      Content Quality (Not in Pilot)
+      Rating & Reviews (Not in Pilot)
+      Product Details
+- Id: CC13
+  Component: CATALOG-Component
+  Priority: P2
+  Requirement: |
+    the user selects an item card via check box the catalog view will display the count of items selected and enable the export functionality	
+- Id: CC14
+  Component: CATALOG-Component
+  Priority: P4
+  Requirement: |
+    When: the user interacts with the Product Details from the item card dropdown
+
+    Then: the user is presented a new page with the item overview
+
+      Image
+      Product Name
+      GTIN
+      Item ID
+    and detailed information bucketed into
+
+      Basic Item Info
+      Site Experience
+      Compliance & Regulatory
+      Category-specific attributes to improve search & browse on Walmart.ca
+    By default, all the above buckets would be in the expanded state.
+- Id: M1
+  Component: Maintenance 
+  Priority: P4
+  Requirement: |
+    The user is able to click Maintenance tile from the left navigation.
+- Id: M2
+  Component: Maintenance 
+  Priority: P4
+  Requirement: |
+    The user is able to view the PCSE tile in the list of available item maintenance capabilities.
+- Id: M3
+  Component: Maintenance 
+  Priority: P1
+  Requirement: |
+    The user is able to hover over the tile to view the description.
+- Id: M4
+  Component: Maintenance 
+  Priority: P1
+  Requirement: |
+    There are 3 sub-tiles:
+    1) Product Content & Site Experience.
+    2) Supply Chain.
+    3) Store Attributes
+- Id: M5
+  Component: Maintenance 
+  Priority: P1
+  Requirement: |
+    The user can click the tile to proceed with the workflows.
+- Id: M6
+  Component: Maintenance 
+  Priority: P1
+  Requirement: |
+    Once within the workflow, they can view the various product IDs. They have capabilities to use:
+    1) GTIN/UPC
+    2) Walmart Item number
+    3) EAN/ISBN
+- Id: M7
+  Component: Maintenance 
+  Priority: P1
+  Requirement: |
+    Once the user enters GTIN, they can select the next button to proceed to enter GTIN's
+- Id: M8
+  Component: Maintenance 
+  Priority: P1
+  Requirement: |
+    Once the user enters Walmart Item number, they can select the next button to proceed to enter Walmart Item number.
+- Id: M9
+  Component: Maintenance 
+  Priority: P1
+  Requirement: |
+    Once the user enters EAN/ISBN, they can select the next button to proceed to enter EAN/ISBN.
+- Id: M10
+  Component: Maintenance 
+  Priority: P1
+  Requirement: |
+    After clicking submit button it will redirect to next page. Here user will see 2 options:
+    1) Export ALL Available Attributes
+    2) Export Custom set of attributes
+- Id: M11
+  Component: Maintenance 
+  Priority: P2
+  Requirement: |
+    User can select radio button of 'Export Custom set of attributes' option.
+- Id: M12
+  Component: Maintenance 
+  Priority: P2
+  Requirement: |
+    User will see 4 sub-headers of:
+    1) Basic Item Info
+    2) Site Experience
+    3) Compliance & Regulatory
+    4) Category specific
+- Id: M13
+  Component: Maintenance 
+  Priority: P2
+  Requirement: |
+    User can select from list populated AND Attributes that can NOT be maintained will say (Read-Only).
+- Id: M14
+  Component: Maintenance 
+  Priority: P2
+  Requirement: |
+    User can see the download button able to download
+- Id: M15
+  Component: Maintenance 
+  Priority: P1
+  Requirement: |
+    Same process for all of the tiles:
+    1) Product Content & Site Experience.
+    2) Supply Chain.
+    3) Store Attributes
+- Id: M16
+  Component: Maintenance 
+  Priority: P1
+  Requirement: |
+    Verify Download Button
+- Id: M17
+  Component: Maintenance 
+  Priority: P3
+  Requirement: |
+    User will see General Description of the functionality maintained by this tile
+- Id: M18
+  Component: Maintenance 
+  Priority: P1
+  Requirement: |
+    User will have the
+    1) Option to place images into folders named by GTIN which can have both single/bulk upload
+    2) Browse files and upload.
+- Id: M19
+  Component: Maintenance 
+  Priority: P1
+  Requirement: |
+    1) Browse files and upload
+    2) User can upload upto 10 images per item
+    3) User will also have the option to view the Image Specifications
+- Id: M20
+  Component: Maintenance 
+  Priority: P1
+  Requirement: |
+    When:  User selects Download.
+
+    Then: System will generate a “Maintainable Spreadsheet”
+      1) Spread sheet will have headers “Item Configuration”, “Logistics & Warehousing”, and "Trade Item"
+      2) One row of pre-populated info per WIN
+      3) Default fields Supplier Name, Supplier Number, GTIN, and, WIN
+      4) Read Only Attribute Text header will be in greyed out and non editable
+- Id: M21
+  Component: Maintenance 
+  Priority: P1
+  Requirement: |
+    When: User is in Attribute Selection Screen.
+
+    Then: User will see the options of " Export All Available Supply Chain Attributes"
+    AND
+    "Export custom set of Supply Chain Attributes"
+    If the user selects a GTIN from an invalid category or category for which the spec sheets aren't ready, 
+    the user will be notified about this error.

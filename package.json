@@ -1,0 +1,15 @@
+{
+  "name": "experiment",
+  "version": "1.0.0",
+  "description": "<table>     <tr>         <th>Evidence</th>         <th>Customer Action</th>         <th>Frontstage Action</th>         <th>Backstage Action</th>         <th>Support Process</th>     </tr>     <tr>         <td>Search Results</td>         <td>Search for \"Hometown Electric\"</td>         <td></td>         <td>Search Engine Optimization</td>         <td></td>     </tr> </table>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "shelljs": "^0.8.4"
+  }
+}

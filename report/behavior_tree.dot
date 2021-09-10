@@ -1,0 +1,104 @@
+digraph G {
+        concentrate=True;
+        rankdir=TB;
+        node [shape=record];
+    
+S1aL1a [style="filled" fillcolor="green" label="L1a
+|{Login|[state 1]}"];
+S1aL1bR1a [style="filled" fillcolor="red" label="R1a
+|{event 1|??event 1??}"];
+S1aL1bR1b [style="filled" fillcolor="red" label="R1b
+|{component 2|[state 2]}"];
+S1aL1bR1c [style="filled" fillcolor="red" label="R1c
+|{component 3|[state 3]}"];
+S1aL1bR1d [style="filled" fillcolor="red" label="R1d
+|{component 4|[state 4]}"];
+S1aL1bR1d1a [style="filled" fillcolor="red" label="R1d1a
+|{guard 1|???state A???}"];
+S1aL1bR1d1b [style="filled" fillcolor="red" label="R1d1b
+|{component 3|[state 3a]}"];
+S1aL1bR1d2a [style="filled" fillcolor="red" label="R1d2a
+|{guard 2|???state B???}"];
+S1aL1bR1d2b [style="filled" fillcolor="red" label="R1d2b
+|{component 3|[state 3b]}"];
+S1aL1bR1eR2a [style="filled" fillcolor="red" label="R2a
+|{|????}"];
+S1aL1bR1eR2b [style="filled" fillcolor="red" label="R2b
+|{|????}"];
+S1aL1bR1e [style="filled" fillcolor="red" label="R1e
+|{component 5|[state 5]}"];
+S1aL1bR1f [style="filled" fillcolor="red" label="R1f
+|{component 6|[state 6]}"];
+S1aL1bR1f1a [style="filled" fillcolor="red" label="R1f1a
+|{component 7|[state 7]}"];
+S1aL1bR1g [style="filled" fillcolor="red" label="R1g
+|{component 8|[state 8]}"];
+S1aL1b [style="filled" fillcolor="green" label="L1b
+|{Login|??state 1??}"];
+S1aL2a [style="filled" fillcolor="green" label="L2a
+|{Login|[state A]}"];
+S1aL2bR1a [style="filled" fillcolor="red" label="R1a
+|{event 1|??event 1??}"];
+S1aL2bR1b [style="filled" fillcolor="red" label="R1b
+|{component 2|[state 2]}"];
+S1aL2bR1c [style="filled" fillcolor="red" label="R1c
+|{component 3|[state 3]}"];
+S1aL2bR1d [style="filled" fillcolor="red" label="R1d
+|{component 4|[state 4]}"];
+S1aL2bR1d1a [style="filled" fillcolor="red" label="R1d1a
+|{guard 1|???state A???}"];
+S1aL2bR1d1b [style="filled" fillcolor="red" label="R1d1b
+|{component 3|[state 3a]}"];
+S1aL2bR1d2a [style="filled" fillcolor="red" label="R1d2a
+|{guard 2|???state B???}"];
+S1aL2bR1d2b [style="filled" fillcolor="red" label="R1d2b
+|{component 3|[state 3b]}"];
+S1aL2bR1eR2a [style="filled" fillcolor="red" label="R2a
+|{|????}"];
+S1aL2bR1eR2b [style="filled" fillcolor="red" label="R2b
+|{|????}"];
+S1aL2bR1e [style="filled" fillcolor="red" label="R1e
+|{component 5|[state 5]}"];
+S1aL2bR1f [style="filled" fillcolor="red" label="R1f
+|{component 6|[state 6]}"];
+S1aL2bR1f1a [style="filled" fillcolor="red" label="R1f1a
+|{component 7|[state 7]}"];
+S1aL2bR1g [style="filled" fillcolor="red" label="R1g
+|{component 8|[state 8]}"];
+S1aL2b [style="filled" fillcolor="green" label="L2b
+|{Login|??state B??}"];
+S1a [style="filled" fillcolor="green" label="S1a
+|{App|[state 1]}"];
+S1a -> S1aL1a;
+S1aL1b -> S1aL1bR1a;
+S1aL1bR1a -> S1aL1bR1b;
+S1aL1bR1b -> S1aL1bR1c;
+S1aL1bR1c -> S1aL1bR1d;
+S1aL1bR1d -> S1aL1bR1d1a;
+S1aL1bR1d1a -> S1aL1bR1d1b;
+S1aL1bR1d -> S1aL1bR1d2a;
+S1aL1bR1d2a -> S1aL1bR1d2b;
+S1aL1bR1e -> S1aL1bR1eR2a;
+S1aL1bR1eR2a -> S1aL1bR1eR2b;
+S1aL1bR1d -> S1aL1bR1e;
+S1aL1bR1e -> S1aL1bR1f;
+S1aL1bR1f -> S1aL1bR1f1a;
+S1aL1bR1f -> S1aL1bR1g;
+S1aL1a -> S1aL1b;
+S1a -> S1aL2a;
+S1aL2b -> S1aL2bR1a;
+S1aL2bR1a -> S1aL2bR1b;
+S1aL2bR1b -> S1aL2bR1c;
+S1aL2bR1c -> S1aL2bR1d;
+S1aL2bR1d -> S1aL2bR1d1a;
+S1aL2bR1d1a -> S1aL2bR1d1b;
+S1aL2bR1d -> S1aL2bR1d2a;
+S1aL2bR1d2a -> S1aL2bR1d2b;
+S1aL2bR1e -> S1aL2bR1eR2a;
+S1aL2bR1eR2a -> S1aL2bR1eR2b;
+S1aL2bR1d -> S1aL2bR1e;
+S1aL2bR1e -> S1aL2bR1f;
+S1aL2bR1f -> S1aL2bR1f1a;
+S1aL2bR1f -> S1aL2bR1g;
+S1aL2a -> S1aL2b;
+}
